@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Scanner | FreshCheck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div>
+                <a class="brand" href="index.html" aria-label="FreshCheck home">FreshCheck</a>
+                <p class="sidebar-caption">Eco-Warrior Level 5</p>
+                <nav aria-label="Main navigation">
+                    <ul class="sidebar-nav">
+                        <li><a class="nav-link" href="index.html"><img src="images/Home.png" alt="">Home</a></li>
+                        <li><a class="nav-link" href="My-Inventory.html"><img src="images/Fridge.png" alt="">Fridge</a></li>
+                        <li><a class="nav-link is-active" href="Smart-Scanner.html" aria-current="page"><img src="images/Scan.png" alt="">Scan</a></li>
+                        <li><span class="nav-link is-disabled" aria-disabled="true"><img src="images/Stats.png" alt="">Stats</span></li>
+                        <li><a class="nav-link" href="Settings.html"><img src="images/Settings.png" alt="">Settings</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <button class="sidebar-add-button" type="button"><span aria-hidden="true">+</span> Add New Item</button>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1 class="page-title">Smart Scanner</h1>
+                <div class="header-tools">
+                    <form class="search-box" role="search">
+                        <label class="visually-hidden" for="scanner-search">Search your pantry</label>
+                        <input id="scanner-search" type="search" placeholder="Search your pantry...">
+                    </form>
+                    <button class="icon-button" type="button" aria-label="Notifications"><img src="images/Bell.png" alt=""></button>
+                    <button class="icon-button heart-button" type="button" aria-label="Favorites">♡</button>
+                    <img class="avatar" src="images/Sprout.jpg" alt="Sprout">
+                </div>
+            </header>
+
+            <div class="scanner-layout">
+                <section class="scan-column" aria-label="Scan an item">
+                    <div class="scanner-preview">
+                        <img src="images/Scanned-Apple.png" alt="Red apple positioned inside a scanner frame">
+                    </div>
+                    <div class="scan-action-row">
+                        <button class="button button-primary" type="button"><span aria-hidden="true">✓</span> Confirm Item</button>
+                        <button class="button button-soft" type="button"><span aria-hidden="true">↗</span> Manual Entry</button>
+                    </div>
+                </section>
+
+                <aside class="scanner-info-column">
+                    <article class="detected-card card">
+                        <div class="detected-heading-row">
+                            <div>
+                                <p class="eyebrow">Detected Object</p>
+                                <h2>Red Gala Apple</h2>
+                            </div>
+                            <span class="match-badge">95%<br>Match</span>
+                        </div>
+                        <section class="freshness-box">
+                            <div class="freshness-heading"><h3>Freshness Rule</h3><strong>Expiring in 5 days</strong></div>
+                            <progress max="100" value="72" aria-label="Apple freshness: 72 percent"></progress>
+                            <p>Based on typical shelf life for refrigerated apples.</p>
+                        </section>
+                        <div class="apple-facts">
+                            <div class="fact-card">
+                                <img src="images/Shapes.png" alt="">
+                                <p class="eyebrow">Category</p>
+                                <p class="fact-value">Produce</p>
+                            </div>
+                            <div class="fact-card">
+                                <img src="images/Orange.png" alt="">
+                                <p class="eyebrow">Est. Calories</p>
+                                <p class="fact-value">95 kcal</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tip-card">
+                        <img src="images/Lightbulb.png" alt="" class="tip-icon">
+                        <h2>Pro Tip from Sprout</h2>
+                        <p>Keeping apples away from other produce helps them stay fresh longer. They release ethylene gas which speeds up ripening!</p>
+                    </article>
+
+                    <section class="recent-card card" aria-labelledby="recent-heading">
+                        <h2 id="recent-heading">Recent Scans Today</h2>
+                        <article class="recent-item">
+                            <img src="images/Egg.png" alt="">
+                            <div><h3>Organic Eggs (6pk)</h3><p>Added 2 hours ago</p></div>
+                            <span aria-hidden="true">›</span>
+                        </article>
+                        <article class="recent-item">
+                            <img src="images/Oat Milk.png" alt="">
+                            <div><h3>Oat Milk</h3><p>Added 5 hours ago</p></div>
+                            <span aria-hidden="true">›</span>
+                        </article>
+                    </section>
+                </aside>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

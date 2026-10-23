@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | FreshCheck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div>
+                <a class="brand" href="index.html" aria-label="FreshCheck home">FreshCheck</a>
+                <p class="sidebar-caption">Eco-Warrior Level 5</p>
+                <nav aria-label="Main navigation">
+                    <ul class="sidebar-nav">
+                        <li><a class="nav-link is-active" href="index.html" aria-current="page"><img src="images/Home.png" alt="">Home</a></li>
+                        <li><a class="nav-link" href="My-Inventory.html"><img src="images/Fridge.png" alt="">Fridge</a></li>
+                        <li><a class="nav-link" href="Smart-Scanner.html"><img src="images/Scan.png" alt="">Scan</a></li>
+                        <li><span class="nav-link is-disabled" aria-disabled="true"><img src="images/Stats.png" alt="">Stats</span></li>
+                        <li><a class="nav-link" href="Settings.html"><img src="images/Settings.png" alt="">Settings</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <button class="sidebar-add-button" type="button"><span aria-hidden="true">+</span> Add New Item</button>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1 class="page-title">Dashboard</h1>
+                <div class="header-tools">
+                    <form class="search-box" role="search">
+                        <label class="visually-hidden" for="dashboard-search">Search your fridge</label>
+                        <input id="dashboard-search" type="search" placeholder="Search your fridge...">
+                    </form>
+                    <button class="icon-button" type="button" aria-label="Notifications"><img src="images/Bell.png" alt=""></button>
+                    <button class="icon-button heart-button" type="button" aria-label="Favorites">♡</button>
+                    <img class="avatar" src="images/Sprout.jpg" alt="Sprout">
+                </div>
+            </header>
+
+            <section class="dashboard-top-row" aria-label="Your progress">
+                <article class="dashboard-hero">
+                    <div class="hero-copy">
+                        <span class="eyebrow hero-eyebrow">Level 5 companion</span>
+                        <h2>Sprout is feeling extra green today!</h2>
+                        <p>You've saved 4 items from the waste bin this week. Keep up the great work for the planet!</p>
+                        <button class="button button-primary" type="button">Give Sprout a Treat</button>
+                    </div>
+                    <img class="hero-image" src="images/Sprout.jpg" alt="Sprout the plant mascot in a sunny kitchen">
+                </article>
+
+                <div class="stats-column">
+                    <article class="stat-card">
+                        <img class="stat-icon" src="images/Bank.png" alt="">
+                        <p class="stat-change">+12%</p>
+                        <p class="eyebrow">Items Saved</p>
+                        <p class="stat-number">128</p>
+                    </article>
+                    <article class="stat-card">
+                        <img class="stat-icon" src="images/Money.png" alt="">
+                        <p class="stat-change">+$42</p>
+                        <p class="eyebrow">Money Saved</p>
+                        <p class="stat-number">$342.50</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="dashboard-middle-row" aria-label="Environmental impact and weekly goal">
+                <article class="impact-card">
+                    <p class="eyebrow">Environmental Impact</p>
+                    <h2 class="impact-number">14.2kg <span>CO2e</span></h2>
+                    <p>That's equivalent to planting 3 young trees in your neighborhood!</p>
+                </article>
+                <article class="weekly-card">
+                    <div class="section-heading compact-heading">
+                        <h2>Weekly Goal</h2>
+                        <span class="completion-label">85% Complete</span>
+                    </div>
+                    <div class="goal-row">
+                        <div class="goal-label"><span>Reduce Waste</span><span>17/20 items</span></div>
+                        <progress max="20" value="17" aria-label="Reduce waste goal: 17 of 20 items"></progress>
+                    </div>
+                    <div class="goal-row">
+                        <div class="goal-label"><span>Meal Prep</span><span>4/7 days</span></div>
+                        <progress class="progress-orange" max="7" value="4" aria-label="Meal prep goal: 4 of 7 days"></progress>
+                    </div>
+                </article>
+            </section>
+
+            <section class="expiring-section">
+                <div class="section-heading">
+                    <div class="section-title-group">
+                        <h2>Expiring Soon</h2>
+                        <span class="count-badge">4 items</span>
+                    </div>
+                    <a class="text-link" href="My-Inventory.html">View Inventory</a>
+                </div>
+                <div class="food-row">
+                    <article class="food-card">
+                        <div class="food-photo-wrap"><img class="food-photo" src="images/Salad.jpg" alt="Fresh baby spinach leaves"><span class="expiry-badge">1 day left</span></div>
+                        <div class="food-card-info"><h3>Baby Spinach</h3><span class="food-dot dot-red" aria-label="Expiring soon"></span></div>
+                        <p class="food-category">Produce</p>
+                        <progress max="100" value="20" aria-label="Baby spinach freshness: 20 percent"></progress>
+                        <button class="button button-outline" type="button">Log as Consumed</button>
+                    </article>
+                    <article class="food-card">
+                        <div class="food-photo-wrap"><img class="food-photo" src="images/Milk.jpg" alt="Bottle of whole milk"><span class="expiry-badge">2 days left</span></div>
+                        <div class="food-card-info"><h3>Whole Milk</h3><span class="food-dot dot-orange" aria-label="Use soon"></span></div>
+                        <p class="food-category">Dairy</p>
+                        <progress max="100" value="38" aria-label="Whole milk freshness: 38 percent"></progress>
+                        <button class="button button-outline" type="button">Log as Consumed</button>
+                    </article>
+                    <article class="food-card">
+                        <div class="food-photo-wrap"><img class="food-photo" src="images/Eggs.jpg" alt="Free range eggs in a carton"><span class="expiry-badge">4 days left</span></div>
+                        <div class="food-card-info"><h3>Free Range Eggs</h3><span class="food-dot dot-orange" aria-label="Use soon"></span></div>
+                        <p class="food-category">Dairy</p>
+                        <progress max="100" value="55" aria-label="Free range eggs freshness: 55 percent"></progress>
+                        <button class="button button-outline" type="button">Log as Consumed</button>
+                    </article>
+                    <article class="food-card">
+                        <div class="food-photo-wrap"><img class="food-photo" src="images/Strawberry's.jpg" alt="Fresh strawberries in a basket"><span class="expiry-badge">5 days left</span></div>
+                        <div class="food-card-info"><h3>Strawberries</h3><span class="food-dot dot-green" aria-label="Fresh"></span></div>
+                        <p class="food-category">Produce</p>
+                        <progress max="100" value="78" aria-label="Strawberries freshness: 78 percent"></progress>
+                        <button class="button button-outline" type="button">Log as Consumed</button>
+                    </article>
+                </div>
+            </section>
+
+            <section class="restock-panel" aria-labelledby="restock-heading">
+                <img class="restock-icon" src="images/Restock.png" alt="">
+                <h2 id="restock-heading">Restocking soon?</h2>
+                <p>Scan your receipt to let Sprout track your new items automatically and keep your eco-streak alive.</p>
+                <div class="button-row">
+                    <button class="button button-primary" type="button">Scan Receipt</button>
+                    <button class="button button-soft" type="button">Manual Entry</button>
+                </div>
+            </section>
+            <button class="floating-button" type="button" aria-label="Quick settings"><img src="images/Settings.png" alt=""></button>
+        </main>
+    </div>
+</body>
+</html>

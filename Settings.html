@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules Engine | FreshCheck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div>
+                <a class="brand" href="index.html" aria-label="FreshCheck home">FreshCheck</a>
+                <p class="sidebar-caption">Eco-Warrior Level 5</p>
+                <nav aria-label="Main navigation">
+                    <ul class="sidebar-nav">
+                        <li><a class="nav-link" href="index.html"><img src="images/Home.png" alt="">Home</a></li>
+                        <li><a class="nav-link" href="My-Inventory.html"><img src="images/Fridge.png" alt="">Fridge</a></li>
+                        <li><a class="nav-link" href="Smart-Scanner.html"><img src="images/Scan.png" alt="">Scan</a></li>
+                        <li><span class="nav-link is-disabled" aria-disabled="true"><img src="images/Stats.png" alt="">Stats</span></li>
+                        <li><a class="nav-link is-active" href="Settings.html" aria-current="page"><img src="images/Settings.png" alt="">Settings</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <button class="sidebar-add-button" type="button"><span aria-hidden="true">+</span> Add New Item</button>
+        </aside>
+
+        <main class="main-content rules-content">
+            <header class="page-header">
+                <h1 class="page-title">Rules Engine</h1>
+                <div class="header-tools">
+                    <form class="search-box" role="search">
+                        <label class="visually-hidden" for="rules-search">Search rules</label>
+                        <input id="rules-search" type="search" placeholder="Search rules...">
+                    </form>
+                    <button class="icon-button" type="button" aria-label="Notifications"><img src="images/Bell.png" alt=""></button>
+                    <button class="icon-button heart-button" type="button" aria-label="Favorites">♡</button>
+                    <img class="avatar" src="images/Sprout.jpg" alt="Sprout">
+                </div>
+            </header>
+
+            <section class="rules-intro">
+                <div>
+                    <h2>The Brain</h2>
+                    <p>Configure the smart logic behind FreshCheck. Define how Sprout reacts to your kitchen habits and set up automated reminders for your food life cycle.</p>
+                </div>
+                <button class="button button-outline activity-button" type="button"><span aria-hidden="true">◷</span> View Activity Log</button>
+            </section>
+
+            <section class="rules-row rules-row-top" aria-label="Food and pet rules">
+                <article class="rule-card card expiration-rule">
+                    <div class="rule-card-heading">
+                        <span class="rule-icon icon-orange"><img src="images/Bell.png" alt=""></span>
+                        <div><h2>Expiration Alert</h2><p>Global Notification Rule</p></div>
+                        <label class="toggle-control"><span class="visually-hidden">Enable expiration alert</span><input type="checkbox" checked></label>
+                    </div>
+                    <div class="rule-builder" aria-label="Notify me two days before dairy expires">
+                        <span class="rule-keyword">IF</span><span class="rule-pill">Item Category</span><span>is</span><span class="rule-pill rule-pill-teal">Dairy</span><span class="rule-keyword">THEN</span><span>notify me</span><span class="rule-pill">2 days</span><span>before expiration</span>
+                    </div>
+                </article>
+
+                <article class="rule-card card pet-rule">
+                    <div class="rule-card-heading">
+                        <span class="rule-icon icon-yellow"><img src="images/Frown.png" alt=""></span>
+                        <div><h2>Pet Reaction</h2></div>
+                        <label class="toggle-control"><span class="visually-hidden">Enable pet reaction</span><input type="checkbox" checked></label>
+                    </div>
+                    <p>If an item is older than 4 days, flash Sprout's mood to Sad.</p>
+                    <div class="visual-cue"><img src="images/Frown.png" alt="Sad face"><strong>Visual cue active</strong></div>
+                </article>
+            </section>
+
+            <section class="rules-row rules-row-bottom" aria-label="Donation and clean-up rules">
+                <article class="rule-card card donation-rule">
+                    <div class="rule-card-heading">
+                        <span class="rule-icon icon-teal"><img src="images/Hand-with-a-Heart.png" alt=""></span>
+                        <div><h2>Donation Prompt</h2></div>
+                        <label class="toggle-control"><span class="visually-hidden">Enable donation prompt</span><input type="checkbox"></label>
+                    </div>
+                    <p>Suggest donation if pantry items are 7 days from expiry.</p>
+                    <div class="charity-line"><strong>Nearby Charity</strong><a href="#charity">City Food Bank</a></div>
+                </article>
+
+                <article class="rule-card card cleanup-rule">
+                    <div class="rule-card-heading">
+                        <span class="rule-icon icon-charcoal"><img src="images/Clean-Up.png" alt=""></span>
+                        <div><h2>Inventory Clean-up</h2></div>
+                        <label class="toggle-control"><span class="visually-hidden">Enable inventory clean-up</span><input type="checkbox" checked></label>
+                    </div>
+                    <p>Automatically move expired items to 'Discarded' after 24 hours.</p>
+                    <div class="schedule-row"><span>Run Daily</span><span>3:00 AM</span></div>
+                </article>
+            </section>
+            <button class="floating-button add-rule-button" type="button" aria-label="Add a rule">+</button>
+        </main>
+    </div>
+</body>
+</html>

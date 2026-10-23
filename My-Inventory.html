@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Inventory | FreshCheck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div>
+                <a class="brand" href="index.html" aria-label="FreshCheck home">FreshCheck</a>
+                <p class="sidebar-caption">Eco-Warrior Level 5</p>
+                <nav aria-label="Main navigation">
+                    <ul class="sidebar-nav">
+                        <li><a class="nav-link" href="index.html"><img src="images/Home.png" alt="">Home</a></li>
+                        <li><a class="nav-link is-active" href="My-Inventory.html" aria-current="page"><img src="images/Fridge.png" alt="">Fridge</a></li>
+                        <li><a class="nav-link" href="Smart-Scanner.html"><img src="images/Scan.png" alt="">Scan</a></li>
+                        <li><span class="nav-link is-disabled" aria-disabled="true"><img src="images/Stats.png" alt="">Stats</span></li>
+                        <li><a class="nav-link" href="Settings.html"><img src="images/Settings.png" alt="">Settings</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <button class="sidebar-add-button" type="button"><span aria-hidden="true">+</span> Add New Item</button>
+        </aside>
+
+        <main class="main-content inventory-content">
+            <header class="page-header">
+                <h1 class="page-title">My Inventory</h1>
+                <div class="header-tools">
+                    <form class="search-box" role="search">
+                        <label class="visually-hidden" for="inventory-search">Search your fridge</label>
+                        <input id="inventory-search" type="search" placeholder="Search fridge...">
+                    </form>
+                    <button class="icon-button" type="button" aria-label="Notifications"><img src="images/Bell.png" alt=""></button>
+                    <button class="icon-button heart-button" type="button" aria-label="Favorites">♡</button>
+                    <img class="avatar" src="images/Sprout.jpg" alt="Sprout">
+                </div>
+            </header>
+
+            <div class="inventory-controls">
+                <div class="filter-list" aria-label="Filter items by category">
+                    <button class="filter-chip is-selected" type="button">All Items</button>
+                    <button class="filter-chip" type="button">Dairy</button>
+                    <button class="filter-chip" type="button">Produce</button>
+                    <button class="filter-chip" type="button">Protein</button>
+                </div>
+                <label class="sort-control">Sort by:
+                    <select aria-label="Sort inventory">
+                        <option>Freshness</option>
+                        <option>Name</option>
+                        <option>Category</option>
+                    </select>
+                </label>
+            </div>
+
+            <section class="inventory-grid" aria-label="Food in your inventory">
+                <article class="inventory-card card">
+                    <div class="inventory-photo-wrap"><img class="inventory-photo" src="images/Milk.jpg" alt="Bottle of whole milk beside a wedge of cheese"><span class="inventory-expiry">Expiring Soon</span></div>
+                    <div class="inventory-card-body">
+                        <div class="inventory-title-row"><h2>Whole Milk</h2><span class="category-chip chip-dairy">Dairy</span></div>
+                        <div class="freshness-line"><span>Freshness Meter</span><strong class="freshness-low">12%</strong></div>
+                        <progress class="freshness-progress low-progress" max="100" value="12" aria-label="Whole milk freshness: 12 percent"></progress>
+                        <div class="inventory-actions"><button class="button button-primary" type="button">Mark as Eaten</button><button class="delete-button" type="button" aria-label="Remove Whole Milk"><img src="images/Trash.png" alt=""></button></div>
+                    </div>
+                </article>
+
+                <article class="inventory-card card">
+                    <img class="inventory-photo" src="images/Salad.jpg" alt="A bowl of fresh baby spinach and tomatoes">
+                    <div class="inventory-card-body">
+                        <div class="inventory-title-row"><h2>Baby Spinach</h2><span class="category-chip chip-produce">Produce</span></div>
+                        <div class="freshness-line"><span>Freshness Meter</span><strong class="freshness-medium">45%</strong></div>
+                        <progress class="freshness-progress" max="100" value="45" aria-label="Baby spinach freshness: 45 percent"></progress>
+                        <div class="inventory-actions"><button class="button button-primary" type="button">Mark as Eaten</button><button class="delete-button" type="button" aria-label="Remove Baby Spinach"><img src="images/Trash.png" alt=""></button></div>
+                    </div>
+                </article>
+
+                <article class="inventory-card card">
+                    <img class="inventory-photo" src="images/Meat.jpg" alt="Fresh chicken breast on a cutting board">
+                    <div class="inventory-card-body">
+                        <div class="inventory-title-row"><h2>Chicken Breast</h2><span class="category-chip chip-protein">Protein</span></div>
+                        <div class="freshness-line"><span>Freshness Meter</span><strong class="freshness-high">92%</strong></div>
+                        <progress class="freshness-progress" max="100" value="92" aria-label="Chicken breast freshness: 92 percent"></progress>
+                        <div class="inventory-actions"><button class="button button-primary" type="button">Mark as Eaten</button><button class="delete-button" type="button" aria-label="Remove Chicken Breast"><img src="images/Trash.png" alt=""></button></div>
+                    </div>
+                </article>
+
+                <article class="inventory-card card">
+                    <img class="inventory-photo" src="images/Lots-of-Fruits.jpg" alt="A bowl of fresh citrus fruit">
+                    <div class="inventory-card-body">
+                        <div class="inventory-title-row"><h2>Citrus Mix</h2><span class="category-chip chip-produce">Produce</span></div>
+                        <div class="freshness-line"><span>Freshness Meter</span><strong class="freshness-medium">58%</strong></div>
+                        <progress class="freshness-progress" max="100" value="58" aria-label="Citrus mix freshness: 58 percent"></progress>
+                        <div class="inventory-actions"><button class="button button-primary" type="button">Mark as Eaten</button><button class="delete-button" type="button" aria-label="Remove Citrus Mix"><img src="images/Trash.png" alt=""></button></div>
+                    </div>
+                </article>
+
+                <button class="add-item-card" type="button">
+                    <span class="add-item-plus" aria-hidden="true">+</span>
+                    <strong>Add Item</strong>
+                    <span>Scan a receipt or barcode to add food quickly.</span>
+                </button>
+            </section>
+
+            <aside class="inventory-toast" aria-label="Sprout suggestion">
+                <img src="images/Sprout.jpg" alt="">
+                <div><p class="toast-title">Sprout says:</p><p>Hey! Your <strong>Whole Milk</strong> is about to expire. How about making some pancakes today?</p><a href="index.html">Show Recipes</a> <button type="button">Not now</button></div>
+                <button class="toast-close" type="button" aria-label="Dismiss suggestion">×</button>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
